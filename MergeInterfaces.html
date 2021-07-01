@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US" >
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title >Control</title>
+</head>
+<body style="background-color:rgb(206, 218, 236);">
+    <style>
+        body {
+          background-image: url('robot.jpg');
+        }
+        </style>
+   <h1 style="color:rgb(6, 6, 32);text-align:center;font-family:courier;"><b> ARM ROBOT Control</b></h1>
+<style>
+    .slidecontainer {
+      width: 100%;
+    }
+    
+    .slider {
+      -webkit-appearance: none;
+      width: 90%;
+      height: 6px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider:hover {
+      opacity: 1;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #04AA6D;
+      cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #04AA6D;
+      cursor: pointer;
+    }
+    label{
+        font-family:courier;
+        color: rgb(8, 9, 75); 
+        font-size:18px;
+        font-style: italic;
+        
+    }
+    </style>
+   <form action="ARM_Project1.php" method="post" >
+    <div class="slidecontainer">
+     <label><b>Engine 1</b></label>
+      <input type="range" min="1" max="180" value="90" class="slider" id="myRange">
+      <p>Value: <span id="demo"></span></p>
+      <label><b>Engine 2</b></label>
+      <input type="range" min="1" max="180" value="90" class="slider" id="myRange1">
+      <p>Value: <span id="demo1"></span></p>
+      <label><b>Engine 3</b></label>
+      <input type="range" min="1" max="180" value="90" class="slider" id="myRange2">
+      <p>Value: <span id="demo2"></span></p>
+      <label><b>Engine 4</b></label>
+      <input type="range" min="1" max="180" value="90" class="slider" id="myRange3">
+      <p>Value: <span id="demo3"></span></p>
+      <label><b>Engine 5</b></label>
+      <input type="range" min="1" max="180" value="90" class="slider" id="myRange4">
+      <p>Value: <span id="demo4"></span></p>
+      <label><b>Engine 6</b></label>
+      <input type="range" min="1" max="180" value="90" class="slider" id="myRange5">
+      <p>Value: <span id="demo5"></span></p>
+    </div>
+    
+    <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    var slider1 = document.getElementById("myRange1");
+    var output1 = document.getElementById("demo1");
+    output1.innerHTML = slider1.value;
+    slider1.oninput = function() {
+      output1.innerHTML = this.value;
+    }
+    var slider2 = document.getElementById("myRange2");
+    var output2 = document.getElementById("demo2");
+    output2.innerHTML = slider2.value;
+    slider2.oninput = function() {
+      output2.innerHTML = this.value;
+    }
+    var slider3 = document.getElementById("myRange3");
+    var output3 = document.getElementById("demo3");
+    output3.innerHTML = slider3.value;
+    slider3.oninput = function() {
+      output3.innerHTML = this.value;
+    }
+    var slider4 = document.getElementById("myRange4");
+    var output4 = document.getElementById("demo4");
+    output4.innerHTML = slider4.value;
+    slider4.oninput = function() {
+      output4.innerHTML = this.value;
+    }
+    var slider5 = document.getElementById("myRange5");
+    var output5 = document.getElementById("demo5");
+    output5.innerHTML = slider5.value;
+    slider5.oninput = function() {
+      output5.innerHTML = this.value;
+    }
+    </script>
+    <style>
+        .button { background-color: #6e6f70; /* Green */  
+             border: none;
+            color: white;
+            padding: 13px 28px;
+            text-align: center;
+            position: relative;
+            top: 50%;
+            left: 75%;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            box-shadow: 0 8px 16px 0 rgba(70, 70, 71, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }</style>
+        <button type= "submit" name="save" class=button> save</button>
+        <button type="submit" name="Run" class=button> Run </button>
+    </style>
+   </form>
+    <style>
+        .btn-center {
+            text-align: center;
+            margin: -90px;
+            display: block;
+            font-family:courier;
+    
+        }
+        </style>
+    <form action="index.php" method="POST">
+        <div class="btn-center">
+        <button type="submit" name= "Forward" style="height: 60px; width: 80px;"><b> Forward </b></button>
+        <button type="submit" name="Left" style="height: 60px; width: 80px;"><b> Left </b> </button>
+        <button type="submit" name="Stop" style="height: 60px; width: 80px;"> <b>Stop </b></button>
+        <button type="submit" name="Right" style="height: 60px; width: 80px;"><b> Right </b> </button>
+        <button type="submit" name="Backward" style="height: 60px; width: 80px;"> <b> Backward </b></button>
+    </div>
+
+
+</form>
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "aaa7c9ac-0b0c-41df-b848-181d2a741953", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "32c90a10-043a-456f-b3d4-2c7da7a523fd", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+   </body>
+</html>
